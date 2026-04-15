@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Portfolio</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+}
+
+header {
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  border-bottom:1px solid #30363d;
+  background:#161b22;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  padding:6px 10px;
+  cursor:pointer;
+  margin-left:5px;
+}
+
+button:hover {
+  background:#238636;
+}
+
+.container {
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  gap:20px;
+  padding:20px;
+}
+
+.card {
+  border:1px solid #30363d;
+  padding:15px;
+  background:#161b22;
+  margin-bottom:15px;
+  border-radius:8px;
+}
+
+h1,h2,h3 {
+  margin:0 0 10px 0;
+}
+
+.skill {
+  display:inline-block;
+  border:1px solid #30363d;
+  padding:5px 8px;
+  margin:3px;
+  border-radius:12px;
+  font-size:12px;
+}
+
+.small {
+  font-size:12px;
+  color:#8b949e;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div>yourname / cv-portfolio</div>
+  <div>
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('nl')">NL</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div>
+
+    <div class="card">
+      <h1 id="title">Technical Support Engineer</h1>
+      <p id="summary" class="small">
+        Technical Support Engineer focused on IT operations, system reliability, incident management, and automation.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Experience</h2>
+      <ul>
+        <li>IT Support Engineer - SLA incident resolution</li>
+        <li>IT Manager - infrastructure maintenance</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Skills</h2>
+      <span class="skill">Windows</span>
+      <span class="skill">Linux</span>
+      <span class="skill">Networking</span>
+      <span class="skill">Automation</span>
+    </div>
+
+  </div>
+
+  <div>
+
+    <div class="card">
+      <h3>Your Name</h3>
+      <p id="availability" class="small">Belgium • Open to Remote / Hybrid</p>
+      <button>Download CV</button>
+      <button>Contact</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+const content = {
+  en: {
+    title: "Technical Support Engineer",
+    summary: "Technical Support Engineer focused on IT operations, system reliability, incident management, and automation.",
+    availability: "Belgium • Open to Remote / Hybrid"
+  },
+  nl: {
+    title: "Technical Support Engineer",
+    summary: "Technical Support Engineer met focus op IT-operaties, systeemstabiliteit, incidentbeheer en automatisatie.",
+    availability: "België • Beschikbaar Remote / Hybride"
+  }
+};
+
+function setLang(lang) {
+  document.getElementById("title").innerText = content[lang].title;
+  document.getElementById("summary").innerText = content[lang].summary;
+  document.getElementById("availability").innerText = content[lang].availability;
+}
+</script>
+
+</body>
+</html>
