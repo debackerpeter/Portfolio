@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Resume | Debacker Peter</title>
+
+<style>
+:root{
+--bg:#f6f8fc;
+--text:#111827;
+--muted:#6b7280;
+--blue:#3b82f6;
+--border:#e5e7eb;
+}
+
+*{box-sizing:border-box;}
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+}
+
+/* TAAL SCHAKELING */
+html[lang="en"] .lang-nl { display: none; }
+html[lang="nl"] .lang-en { display: none; }
+
+header{
+background:#fff;
+border-bottom:1px solid var(--border);
+}
+
+.nav{
+max-width:950px;
+margin:auto;
+padding:18px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.menu{ display:flex; gap:24px; }
+.menu a{ text-decoration:none; font-weight:600; color:#111827; }
+.menu a:hover{ color:var(--blue); }
+
+.lang{ display:flex; gap:8px; }
+.lang button{ border:1px solid var(--border); background:white; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:bold; }
+.lang button:hover { background: #f0f0f0; }
+
+.container{ max-width:950px; margin:35px auto 60px; padding:0 20px; }
+.hero{ margin-bottom:45px; }
+.hero p{ color:var(--muted); line-height:1.7; margin-bottom: 20px; }
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+.btn-download:hover { opacity: 0.9; }
+
+.timeline{ display:flex; flex-direction:column; gap:28px; }
+.card{ background:#fff; border:1px solid var(--border); border-radius:14px; padding:26px; box-shadow:0 4px 12px rgba(0,0,0,.03); }
+.job-header{ display:flex; align-items:center; gap:18px; margin-bottom:14px; }
+.job-header img{ width:70px; height:70px; object-fit:contain; }
+.company{ color:var(--blue); font-weight:bold; }
+.meta{ font-size:14px; color:var(--muted); margin-bottom:14px; }
+.card p{ line-height:1.7; color:var(--muted); margin:0; }
+
+footer{ margin-top:60px; padding:30px; text-align:center; border-top:1px solid var(--border); color:var(--muted); }
+
+@media(max-width:768px){ .job-header{ flex-direction:column; align-items:flex-start; } }
+</style>
+</head>
+<body>
+
+<header>
+<div class="nav">
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="resume.html"><strong>
+    <span class="lang-en">Résumé</span>
+    <span class="lang-nl">CV</span>
+</strong></a>
+<a href="contact.html">Contact</a>
+</div>
+<div class="lang">
+<button onclick="changeLang('en')">EN</button>
+<button onclick="changeLang('nl')">NL</button>
+</div>
+</div>
+</header>
+
+<div class="container">
+
+<div class="hero">
+<h1 class="lang-en">Professional Experience</h1>
+<h1 class="lang-nl">Professionele Ervaring</h1>
+<p class="lang-en" style="white-space: nowrap;">25+ years of experience in Technical Support, Systems Engineering, Infrastructure Management and Customer-Focused IT Services.</p>
+<p class="lang-nl">
+Meer dan 25 jaar ervaring in Technical Support, Systems Engineering,
+Infrastructuurbeheer en Klantgerichte IT-diensten.
+</p>
+
+<a href="CV_EN.pdf" class="btn-download lang-en" download>
+    Download CV (PDF)
+</a>
+<a href="CV_NL.pdf" class="btn-download lang-nl" download>
+    Download CV (PDF)
+</a>
+</div>
+
+<div class="timeline">
+
+<!-- COMITOR -->
+<div class="card">
+<div class="job-header">
+<img src="Comitor.jpg" alt="Comitor logo">
+<div>
+<h3>Technical Support Engineer</h3>
+<div class="company">Comitor</div>
+</div>
+</div>
+<div class="meta">Nov 2018 – Aug 2023 · Belgium · Hybrid</div>
+<p class="lang-en">
+Responsible for the maintenance and management of company servers, as well as the management of customers internal network infrastructure, including resolving remote issues and providing technical support. Involved in the implementation of new IT systems and software upgrades and conducting audits of new customers to collect necessary information.
+</p>
+<p class="lang-nl">
+Verantwoordelijk voor het onderhoud en beheer van bedrijfsservers, evenals het beheer van de interne netwerkinfrastructuur van klanten, inclusief het oplossen van problemen op afstand en het bieden van technische ondersteuning. Betrokken bij de implementatie van nieuwe IT-systemen en software-upgrades en het uitvoeren van audits bij nieuwe klanten om de nodige informatie te verzamelen.
+</p>
+</div>
+
+<!-- ZNA -->
+<div class="card">
+<div class="job-header">
+<img src="zna.jpg" alt="ZNA logo">
+<div>
+<h3 class="lang-en">ICT System Engineer Clinical Applications</h3>
+<h3 class="lang-nl">ICT System Engineer Klinische Applicaties</h3>
+<div class="company">ZNA - Ziekenhuis Netwerk Antwerpen</div>
+</div>
+</div>
+<div class="meta">Jul 2013 – Oct 2018 · Belgium · On-site</div>
+<p class="lang-en">
+Responsible for installation procedures, monitoring the change & release process, resolving user errors and providing technical support to end users, with a focus on the technical use of the applications and close collaboration with colleagues within the ICT group.
+</p>
+<p class="lang-nl">
+Verantwoordelijk voor installatieprocedures, het monitoren van het change- en releaseproces, het oplossen van gebruikersfouten en het bieden van technische ondersteuning aan eindgebruikers, met een focus op het technisch gebruik van applicaties en nauwe samenwerking met collega’s binnen de ICT-groep.
+</p>
+</div>
+
+<!-- ECS TECHNICS -->
+<div class="card">
+<div class="job-header">
+<img src="ECS TECHNICS.jpg" alt="ECS Technics logo">
+<div>
+<h3>Support & System Engineer</h3>
+<div class="company">ECS Technics NV</div>
+</div>
+</div>
+<div class="meta">2009 – Mar 2013 · Belgium / Netherlands · On-site</div>
+<p class="lang-en">
+Supporting internal users in various ways, including remote assistance, telephone assistance and personal on-site support. Ensure the management of servers and take responsibility for troubleshooting both software and hardware issues, as well as installations if necessary.
+</p>
+<p class="lang-nl">
+Ondersteunen van interne gebruikers op verschillende manieren, waaronder ondersteuning op afstand, telefonische ondersteuning en persoonlijke ondersteuning ter plaatse. Zorg dragen voor het beheer van servers en verantwoordelijkheid nemen voor het oplossen van zowel software- als hardware problemen, evenals installaties indien nodig.
+</p>
+</div>
+
+<!-- ALTRAD -->
+<div class="card">
+<div class="job-header">
+<img src="altrad.jpg" alt="Altrad logo">
+<div>
+<h3>Support & System Engineer</h3>
+<div class="company">ALTRAD</div>
+</div>
+</div>
+<div class="meta">2007 – 2008 · Belgium · On-site</div>
+<p class="lang-en">
+Extensive support to end users for both software and hardware problems, managing servers, working proactively and structured with a flexible, helpful and driven approach.
+</p>
+<p class="lang-nl">
+Uitgebreide ondersteuning bieden aan eindgebruikers voor zowel software- als hardware problemen, servers beheren en proactief en gestructureerd werken met een flexibele, behulpzame en gedreven aanpak.
+</p>
+</div>
+
+<!-- PORT OF ANTWERP -->
+<div class="card">
+<div class="job-header">
+<img src="portofantwerp.jpg" alt="Port of Antwerp logo">
+<div>
+<h3>Support Engineer</h3>
+<div class="company">Port of Antwerp-Bruges</div>
+</div>
+</div>
+<div class="meta">2006 – 2007 · Belgium · On-site</div>
+<p class="lang-en">
+Providing technical support to internal users through remote assistance, telephone assistance and helpdesk support to resolve various questions and problems.
+</p>
+<p class="lang-nl">
+Technische ondersteuning bieden aan interne gebruikers via remote assistentie, telefonische ondersteuning en helpdeskondersteuning om diverse vragen en problemen op te lossen.
+</p>
+</div>
+
+<!-- VOPAK -->
+<div class="card">
+<div class="job-header">
+<img src="vopak.jpg" alt="Vopak logo">
+<div>
+<h3 class="lang-en">Support & System Engineer / Ad hoc IT Manager</h3>
+<h3 class="lang-nl">Support & System Engineer / Ad hoc IT Manager</h3>
+<div class="company">Vopak</div>
+</div>
+</div>
+<div class="meta">2000 – 2006 · Belgium / Netherlands / Germany · On-site</div>
+<p class="lang-en">
+Managing a team of 4 IT employees after the IT manager was fired. My tasks include purchasing IT equipment, participating in meetings, coordinating/carrying out internal moves, managing and executing internal projects, updating and managing servers and providing technical support to internal users through various communication channels, including with the aim of keeping the infrastructure up to date.
+</p>
+<p class="lang-nl">
+Aansturen van een team van 4 IT-medewerkers na het ontslag van de IT-manager. Mijn taken omvatten de aankoop van IT-apparatuur, deelname aan vergaderingen, het coördineren/uitvoeren van interne verhuizingen, het beheren en uitvoeren van interne projecten, het updaten en beheren van servers en het bieden van technische ondersteuning aan interne gebruikers via verschillende communicatiekanalen, met als doel de infrastructuur up-to-date te houden.
+</p>
+</div>
+
+<!-- OPEL -->
+<div class="card">
+<div class="job-header">
+<img src="opel.jpg" alt="Opel logo">
+<div>
+<h3 class="lang-en">Administrative Employee & IT Support for HRM Division</h3>
+<h3 class="lang-nl">Administratief Medewerker & IT Support HRM</h3>
+<div class="company">Opel Belgium</div>
+</div>
+</div>
+<div class="meta">1995 – 2000 · Belgium · On-site</div>
+<p class="lang-en">
+Fulfilling the role of administrative assistant and IT support for the HRM department.
+</p>
+<p class="lang-nl">
+Vervullen van de rol van administratief medewerker en IT-ondersteuning voor de HRM-afdeling.
+</p>
+</div>
+
+</div>
+</div>
+
+<footer>© 2026 Debacker Peter</footer>
+
+<script>
+function changeLang(lang) {
+    document.documentElement.lang = lang;
+    localStorage.setItem('prefLang', lang);
+}
+const savedLang = localStorage.getItem('prefLang') || 'en';
+document.documentElement.lang = savedLang;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Debacker Peter</title>
+
+<style>
+:root{
+--bg:#f6f8fc;
+--text:#111827;
+--muted:#6b7280;
+--blue:#3b82f6;
+--border:#e5e7eb;
+}
+
+*{box-sizing:border-box;}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+}
+
+/* TAAL SCHAKELING */
+html[lang="en"] .lang-nl { display: none; }
+html[lang="nl"] .lang-en { display: none; }
+
+/* HEADER */
+header{
+background:#fff;
+border-bottom:1px solid var(--border);
+}
+
+.nav{
+max-width:950px;
+margin:auto;
+padding:18px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.menu{
+display:flex;
+gap:24px;
+}
+
+.menu a{
+text-decoration:none;
+font-weight:600;
+color:#111827;
+}
+
+.menu a:hover{
+color:var(--blue);
+}
+
+.lang{
+display:flex;
+gap:8px;
+}
+
+.lang button{
+border:1px solid var(--border);
+background:white;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
+font-weight: bold;
+}
+
+.lang button:hover { background: #f0f0f0; }
+
+/* MAIN */
+.container{
+max-width:950px;
+margin:35px auto 60px auto;
+padding:0 20px;
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:60px;
+}
+
+h2{ margin:0 0 6px; }
+
+p{
+line-height:1.7;
+color:var(--muted);
+margin-bottom:20px;
+}
+
+ul{ padding-left:18px; }
+
+li{
+margin-bottom:7px;
+color:var(--muted);
+}
+
+.slogan-text{
+color:var(--blue);
+font-weight:bold;
+font-size:18px;
+}
+
+/* SKILLS */
+.skills-row{
+display:flex;
+flex-wrap:nowrap;
+gap:10px;
+overflow-x:auto;
+padding-bottom: 10px;
+}
+
+.badge{
+padding:8px 16px;
+background:#eef2ff;
+color:var(--blue);
+border-radius:20px;
+font-size:13px;
+font-weight:600;
+white-space:nowrap;
+}
+
+/* PROFILE */
+.profile{ text-align:center; }
+.profile img{
+width:220px;
+border-radius:12px;
+border:1px solid var(--border);
+margin-bottom:12px;
+}
+
+/* FOOTER */
+footer{
+margin-top:60px;
+padding:30px;
+text-align:center;
+border-top:1px solid var(--border);
+color:var(--muted);
+}
+
+@media(max-width:900px){
+.container{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+<div class="menu">
+<a href="index.html"><strong>Home</strong></a>
+<a href="resume.html">
+    <span class="lang-en">Résumé</span>
+    <span class="lang-nl">CV</span>
+</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="lang">
+<button onclick="changeLang('en')">EN</button>
+<button onclick="changeLang('nl')">NL</button>
+</div>
+</div>
+</header>
+
+<div class="container">
+<div>
+<p style="margin:0;">&nbsp;</p>
+
+<h2 class="lang-en">Professional Objective</h2>
+<h2 class="lang-nl">Professionele Doelstelling</h2>
+
+<p class="lang-en">
+Passionate IT professional with project management experience and strong customer orientation. Focused on teamwork and developing user-friendly, innovative IT solutions that effectively support business goals.
+</p>
+<p class="lang-nl">
+Gepassioneerde IT-professional met projectmanagementervaring en sterke klantgerichtheid. Focus op teamwerk en het ontwikkelen van gebruiksvriendelijke, innovatieve IT-oplossingen die bedrijfsdoelen effectief ondersteunen
+</p>
+
+<p style="margin:0;">&nbsp;</p>
+
+<h2 class="lang-en">Personal Competencies</h2>
+<h2 class="lang-nl">Persoonlijke Competenties</h2>
+
+<ul class="lang-en">
+<li>Stress resistant and positive, with a solution-oriented mindset</li>
+<li>Empathetic and helpful, with an eye for others' needs</li>
+<li>Patient and effective in conveying knowledge to small groups</li>
+<li>Eager to learn and continuously seeking new insights and development</li>
+<li>Effective and results-oriented both independently and in team settings</li>
+<li>Punctual and precise in executing tasks and projects</li>
+<li>Strong communication skills, both internally and externally</li>
+<li>Strong analytical skills, with a keen eye for detail and problem-solving</li>
+</ul>
+<ul class="lang-nl">
+<li>Stressbestendig en positief ingesteld, met een oplossingsgerichte mentaliteit</li>
+<li>Empathisch en behulpzaam, met oog voor de behoeften van anderen</li>
+<li>Geduldig en effectief in het overbrengen van kennis aan kleine groepen</li>
+<li>Leergierig en voortdurend op zoek naar nieuwe inzichten en ontwikkeling</li>
+<li>Zowel zelfstandig als in teamverband effectief en resultaatgericht werken</li>
+<li>Punctueel en nauwkeurig in het uitvoeren van taken en projecten</li>
+<li>Sterke communicatieve vaardigheden, zowel intern als extern</li>
+<li>Analytisch sterk, met een scherp oog voor details en probleemoplossing</li>
+</ul>
+
+<p style="margin:0;">&nbsp;</p>
+
+<h2 class="lang-en">About</h2>
+<h2 class="lang-nl">Over mij</h2>
+
+<p class="lang-en">
+Technical Support Engineer with a passion for innovation, problem-solving and project follow-up. Experienced in networking and ad hoc IT management, with a strong analytical approach.
+</p>
+<p class="lang-nl">
+Technical Support Engineer met een passie voor innovatie, probleemoplossing en projectopvolging. Ervaren in netwerken en ad hoc IT-beheer, met een sterke analytische aanpak.
+</p>
+
+<p style="margin:0;">&nbsp;</p>
+
+<h2 class="lang-en">Happy Slogan</h2>
+<h2 class="lang-nl">Positieve Slogan</h2>
+
+<p class="slogan-text lang-en">POSITIVE THOUGHTS, POWERFUL RESULTS!</p>
+<p class="slogan-text lang-nl">POSITIEVE GEDACHTEN, KRACHTIGE RESULTATEN!</p>
+
+<p style="margin:0;">&nbsp;</p>
+
+<h2 class="lang-en">Top Skills</h2>
+<h2 class="lang-nl">Belangrijkste Vaardigheden</h2>
+
+<div class="skills-row">
+<span class="badge lang-en">Analytical Skills</span><span class="badge lang-nl">Analytische Vaardigheden</span>
+<span class="badge lang-en">Problem Solving</span><span class="badge lang-nl">Probleemoplossing</span>
+<span class="badge">Systems Engineering</span>
+<span class="badge">Support Engineering</span>
+<span class="badge lang-en">IT Management</span><span class="badge lang-nl">IT Management</span>
+</div>
+</div>
+
+<div class="profile">
+  <img src="profile.jpg" alt="Profile foto">
+  <h3>Debacker Peter</h3>
+</div>
+</div>
+
+<footer>© 2026 Debacker Peter</footer>
+
+<script>
+function changeLang(lang) {
+    document.documentElement.lang = lang;
+    localStorage.setItem('prefLang', lang);
+}
+// Load preferred language
+const savedLang = localStorage.getItem('prefLang') || 'en';
+document.documentElement.lang = savedLang;
+</script>
+
+</body>

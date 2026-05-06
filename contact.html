@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Debacker Peter</title>
+
+<style>
+:root{
+ --bg:#f6f8fc;
+ --card:#ffffff;
+ --text:#111827;
+ --muted:#6b7280;
+ --blue:#3b82f6;
+ --border:#e5e7eb;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+}
+
+/* TAAL SCHAKELING */
+html[lang="en"] .lang-nl { display: none; }
+html[lang="nl"] .lang-en { display: none; }
+
+header{
+background:#fff;
+border-bottom:1px solid var(--border);
+}
+
+.nav{
+max-width:950px;
+margin:auto;
+padding:18px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.menu{ display:flex; gap:24px; }
+.menu a{ text-decoration:none; font-weight:600; color:#111827; }
+.menu a:hover{ color:#3b82f6; }
+
+.lang{ display:flex; gap:8px; }
+.lang button{ border:1px solid var(--border); background:white; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:bold; }
+.lang button:hover { background: #f0f0f0; }
+
+.container{ max-width:950px; margin:35px auto 60px auto; padding:0 20px; }
+h1{ margin-bottom:35px; }
+
+.contact-grid{ display:grid; grid-template-columns:1fr 1.2fr 1fr; gap:25px; margin-bottom:45px; }
+.card{ background:#fff; border:1px solid var(--border); border-radius:14px; padding:28px; box-shadow:0 4px 12px rgba(0,0,0,.03); }
+.card h3{ margin-top:0; margin-bottom:12px; color:#3b82f6; }
+.card p{ margin:0; line-height:1.6; color:var(--muted); }
+.card a{ text-decoration:none; color:#111827; font-weight:600; }
+
+form{ background:#fff; border:1px solid var(--border); border-radius:14px; padding:30px; box-shadow:0 4px 12px rgba(0,0,0,.03); }
+label{ display:block; font-weight:600; margin-bottom:8px; }
+input, textarea{ width:100%; padding:12px; margin-bottom:20px; border:1px solid var(--border); border-radius:8px; font-size:15px; }
+textarea{ height:140px; resize:none; }
+button[type="submit"]{ background:#3b82f6; color:white; border:none; padding:12px 24px; border-radius:8px; cursor:pointer; font-weight:600; }
+button[type="submit"]:hover{ opacity:.92; }
+
+footer{ margin-top:60px; padding:30px; text-align:center; border-top:1px solid var(--border); color:var(--muted); }
+
+@media(max-width:900px){
+.contact-grid{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="nav">
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="resume.html">
+    <span class="lang-en">Résumé</span>
+    <span class="lang-nl">CV</span>
+</a>
+<a href="contact.html"><strong>Contact</strong></a>
+</div>
+<div class="lang">
+<button onclick="changeLang('en')">EN</button>
+<button onclick="changeLang('nl')">NL</button>
+</div>
+</div>
+</header>
+
+<div class="container">
+<h1>Contact</h1>
+
+<div class="contact-grid">
+<div class="card">
+<h3 class="lang-en">Email</h3><h3 class="lang-nl">E-mail</h3>
+<p><a href="mailto:debackerpeter@gmail.com">debackerpeter@gmail.com</a></p>
+</div>
+
+<div class="card">
+<h3>LinkedIn</h3>
+<p><a href="https://www.linkedin.com/in/debackerpeter" target="_blank">linkedin.com/in/debackerpeter</a></p>
+</div>
+
+<div class="card">
+<h3 class="lang-en">Location</h3><h3 class="lang-nl">Locatie</h3>
+<p><a href="https://www.google.com/maps/search/?api=1&query=Bisschoppenhoflaan 422, 2100 Antwerpen" target="_blank">2100 Deurne(Antwerpen)</a></p>
+</div>
+</div>
+
+<form action="https://formspree.io/f/mzdopppr" method="POST">
+<label class="lang-en">Your Email</label><label class="lang-nl">Je E-mailadres</label>
+<input type="email" name="email" required>
+
+<label class="lang-en">Your Message</label><label class="lang-nl">Je Bericht</label>
+<textarea name="message" required></textarea>
+
+<button type="submit">
+    <span class="lang-en">Send Message</span>
+    <span class="lang-nl">Bericht Verzenden</span>
+</button>
+</form>
+</div>
+
+<footer>© 2026 Debacker Peter</footer>
+
+<script>
+function changeLang(lang) {
+    document.documentElement.lang = lang;
+    localStorage.setItem('prefLang', lang);
+}
+const savedLang = localStorage.getItem('prefLang') || 'en';
+document.documentElement.lang = savedLang;
+</script>
+
+</body>
